@@ -1904,6 +1904,10 @@ html {
   display: grid;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-flow-row {
   grid-auto-flow: row;
 }
@@ -1941,4 +1945,9 @@ html {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:text-sky-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(3 105 161 / var(--tw-text-opacity));
 }

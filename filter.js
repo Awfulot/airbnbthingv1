@@ -93,53 +93,53 @@ const homes = [
     }
 ];
 
-function findType(targetArray){
-
+function findType(originalArray,arrayType){
+const newArray = originalArray.filter((item) =>{
+    if(item.type === arrayType){
+        return true
+    }
+    return false
+})
+    createElements(newArray)
 }
 
 function buttonManager(){
 
-};
+}
 
 lakefrontButton.addEventListener("click", function (){
-const findLakefront = homes.filter((item) =>{
-    if(item.type === "Lakefront"){
-        return true;
-    }
-    return false;
-})
-    createElements(findLakefront)
+findType(homes,"Lakefront")
 });
 
 beachButton.addEventListener("click", function (){
-
+findType(homes,"Beach")
 });
 
 cabinButton.addEventListener("click", function (){
-
+findType(homes,"Cabins")
 });
 
 omgButton.addEventListener("click", function (){
-
+findType(homes,"OMG")
 });
 
 nationalButton.addEventListener("click", function (){
-
+findType(homes,"National parks")
 });
 
 tinyButton.addEventListener("click", function (){
-console.log("test")
+findType(homes,"Tiny homes")
 });
 
 
 const createElements = (array) => {
-
+    displayHomesDiv.innerHTML = ""
     array.forEach((item) => {
         let randomImgNumber = Math.floor(Math.random() * 1000);
 
 
         const createdDiv = document.createElement("div")//.innerHTML = `${array.type}`
-        createdDiv.innerHTML = `<div class="border border-black rounded-md shadow-lg">${item.type} <img src= ${item.image}+${String(randomImgNumber)}>, ${item.address}, ${item.city}, $${item.rent}</div>`;
+        createdDiv.innerHTML = `<div class="border-2 border-black rounded-md shadow-lg">${item.type} <img src= ${item.image}+${String(randomImgNumber)}>, ${item.address}, ${item.city}, $${item.rent}</div>`;
         displayHomesDiv.appendChild(createdDiv);
     });
 };
