@@ -8,8 +8,8 @@
     <title>Airbnb Thing V1</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-blue-200">
-<div class="flex space-x-10">
+<body class="bg-gray-200 h-screen">
+<div class="flex justify-between p-10">
     <p id="lakefront-button"class="cursor-pointer hover:text-sky-700">Lakefront</p>
     <p id="beach-button"class="cursor-pointer hover:text-sky-700">Beach</p>
     <p id="cabin-button"class="cursor-pointer hover:text-sky-700">Cabins</p>
@@ -17,7 +17,10 @@
     <p id="national-button"class="cursor-pointer hover:text-sky-700">National Parks</p>
     <p id="tiny-button"class="cursor-pointer hover:text-sky-700">Tiny Homes</p>
 </div>
-<div id="display-homes" class="flex flex-wrap"></div>
+<hr class="text-black">
+<div id="display-homes" class="grid grid-cols-4 grid-flow-row gap-2"></div>
 <script src="filter.js"></script>
+
+
 </body>
 </html>
